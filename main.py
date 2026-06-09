@@ -5,7 +5,7 @@ import numpy as np
 import joblib
 
 # Cargar modelo desde MLflow
-pipeline = joblib.load("pipeline_data_science.joblib")
+model = joblib.load("pipeline_data_science.joblib")
 
 app = FastAPI()
 
