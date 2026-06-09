@@ -3,11 +3,10 @@ from pydantic import BaseModel, ValidationError
 from fastapi import FastAPI, HTTPException
 import mlflow.pyfunc
 import numpy as np
+import joblib
 
 # Cargar modelo desde MLflow
-model = mlflow.pyfunc.load_model(
-    "runs:/60616b757b3c4ef1a59312bc7c18aa27/pipeline_data_science"
-)
+pipeline = joblib.load("pipeline_data_science.joblib")
 
 app = FastAPI()
 
