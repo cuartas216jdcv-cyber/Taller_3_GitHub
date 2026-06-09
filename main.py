@@ -1,7 +1,6 @@
 from pandas import DataFrame
 from pydantic import BaseModel, ValidationError
 from fastapi import FastAPI, HTTPException
-import mlflow.pyfunc
 import numpy as np
 import joblib
 
